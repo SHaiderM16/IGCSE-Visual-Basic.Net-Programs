@@ -1,0 +1,34 @@
+Module Module1
+
+    Sub Main()
+        Dim Flights As Integer
+        Dim FlightID As String
+        Dim FlightsFastair As Integer = 0
+        Dim FlightsSwiftjet As Integer = 0
+        Dim FlightsKnightair As Integer = 0
+        Dim Count As Integer = 0
+        Dim PercentFastair As Decimal
+        Dim PercentSwiftjet As Decimal
+        Dim PercentKnightair As Decimal
+        Console.WriteLine("Input the flight identification")
+        For Flights = 1 To 5
+            FlightID = Console.ReadLine()
+            Count = Count + 1
+            If FlightID = "FA" Then
+                FlightsFastair = FlightsFastair + 1
+            ElseIf FlightID = "SJ" Then
+                FlightsSwiftjet = FlightsSwiftjet + 1
+            ElseIf FlightID = "KA" Then
+                FlightsKnightair = FlightsKnightair + 1
+            End If
+        Next
+        PercentFastair = FlightsFastair / Count * 100
+        PercentSwiftjet = FlightsSwiftjet / Count * 100
+        PercentKnightair = FlightsKnightair / Count * 100
+        Console.WriteLine("The percentage of flights that were from FastAir is %" & PercentFastair)
+        Console.WriteLine("The percentage of flights that were from SwiftJet is %" & PercentSwiftjet)
+        Console.WriteLine("The percentage of flights that were from KnightAir is %" & PercentKnightair)
+        Console.ReadLine()
+    End Sub
+
+End Module

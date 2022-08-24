@@ -1,0 +1,49 @@
+Module Module1
+
+    Sub Main()
+        Dim Students As Integer
+        Dim SName As String
+        Dim SChoice As Integer
+        Dim SumRock As Integer = 0
+        Dim SumSoul As Integer = 0
+        Dim SumPop As Integer = 0
+        Dim SumJazz As Integer = 0
+        Dim SumClassical As Integer = 0
+        Dim Count As Integer = 0
+        Dim PercentRock As Integer
+        Dim PercentSoul As Integer
+        Dim PercentPop As Integer
+        Dim PercentJazz As Integer
+        Dim PercentClassical As Integer
+        Console.WriteLine("Enter your name and the value of your music preference separately")
+        For Students = 1 To 6
+            SName = Console.ReadLine()
+            SChoice = Console.ReadLine()
+            Count = Count + 1
+            If SChoice = 1 Then
+                SumRock = SumRock + 1
+            ElseIf SChoice = 2 Then
+                SumSoul = SumSoul + 1
+            ElseIf SChoice = 3 Then
+                SumPop = SumPop + 1
+            ElseIf SChoice = 4 Then
+                SumJazz = SumJazz + 1
+            ElseIf SChoice = 5 Then
+                SumClassical = SumClassical + 1
+                Console.WriteLine(SName & " chose classical as his/her music preference")
+            End If
+        Next
+        PercentRock = SumRock / Count * 100
+        PercentSoul = SumSoul / Count * 100
+        PercentPop = SumPop / Count * 100
+        PercentJazz = SumJazz / Count * 100
+        PercentClassical = SumClassical / Count * 100
+        Console.WriteLine("The percentage of students who prefer rock music is %" & PercentRock)
+        Console.WriteLine("The percentage of students who prefer soul music is %" & PercentSoul)
+        Console.WriteLine("The percentage of students who prefer pop music is %" & PercentPop)
+        Console.WriteLine("The percentage of students who prefer Jazz music is %" & PercentJazz)
+        Console.WriteLine("The percentage of students who prefer classical music is %" & PercentClassical)
+        Console.ReadLine()
+    End Sub
+
+End Module
